@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Indian Restaurant</title>
-	<link rel="stylesheet" href="styles.css">
-	<script src="script.js"></script>
+	<link rel="stylesheet" href="style.css">
     <style>
         /* Global styles */
 body {
@@ -14,7 +15,7 @@ body {
 
 /* Header styles */
 header {
-	background-color: #000000;
+	background-color: #f8f8f8;
 	padding: 20px;
 }
 
@@ -34,9 +35,9 @@ header nav li:first-child {
 }
 
 header nav a {
-	color: #ffffff;
+	color: #333;
 	text-decoration: none;
-	font-size: 20px;
+	font-size: 25px;
 }
 
 /* Hero section styles */
@@ -117,15 +118,7 @@ header nav a {
 .order select {
 	width: 300px;
 	padding: 10px;
-	margin-bottom: 10px;
-}
-
-.order button {
-	padding: 10px 20px;
-	background-color: #333;
-	color: #fff;
-	border: none;
-	cursor: pointer;
+	margin-bottom: 10
 }
     </style>
 </head>
@@ -133,12 +126,11 @@ header nav a {
 	<header>
 		<nav>
 			<ul>
-                <li><a href="#" style="color: rgb(234, 101, 101);">PP Restaurant</a>
-				<li><a href="#">Home</a></li>
+                <li><a href="#" style="color: rgb(225, 131, 131);">PP Restaurant</a></li>
 				<li><a href="#">Menu</a></li>
 				<li><a href="#">Reservation</a></li>
-				<li><a href="#">Contact</a></li>
 				<li><a href="#">Order Food</a></li>
+				<li><a href="#">Contact</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -221,14 +213,14 @@ header nav a {
 			<label for="food">Food:</label>
 			<select id="food" name="food" required>
 				<option value="">Select Food</option>
-				<option value="food1">Biryani</option>
-				<option value="food2">Dosa</option>
-				<option value="food3">Gulab Jamun</option>
-				<option value="food4">Korma</option>
-				<option value="food5">Madras Curry</option>
-				<option value="food6">Naan</option>
-				<option value="food7"> Paratha</option>
-				<option value="food8">Raita</option>
+				<option value="food1">Food 1</option>
+				<option value="food2">Food 2</option>
+				<option value="food3">Food 3</option>
+				<option value="food4">Food 4</option>
+				<option value="food5">Food 5</option>
+				<option value="food6">Food 6</option>
+				<option value="food7">Food 7</option>
+				<option value="food8">Food 8</option>
 				<!-- Add more food options here -->
 			</select>
 
@@ -242,5 +234,7 @@ header nav a {
 	<footer>
 		<p>&copy; 2023 Indian Restaurant. All rights reserved.</p>
 	</footer>
+
+	<script src="script.js"></script>
 </body>
 </html>

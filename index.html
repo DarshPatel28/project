@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Indian Restaurant</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="script.js"></script>
+    <style>
+        /* Global styles */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/* Header styles */
+header {
+	background-color: #000000;
+	padding: 20px;
+}
+
+header nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+header nav li {
+	margin-left: 20px;
+}
+
+header nav li:first-child {
+	margin-left: 0;
+}
+
+header nav a {
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+/* Hero section styles */
+.hero {
+	background-image: url('hero-bg.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+
+/* Menu section styles */
+.menu {
+	background-color: #fff;
+	padding: 50px;
+}
+
+.menu h2 {
+	text-align: center;
+}
+
+.menu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.menu li {
+	margin-right: 20px;
+	margin-bottom: 20px;
+	flex-basis: calc(33.33% - 20px);
+}
+
+.menu li:last-child {
+	margin-right: 0;
+}
+
+.food-item {
+	text-align: center;
+}
+
+.food-item img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 50%;
+	margin-bottom: 10px;
+}
+
+/* Order section styles */
+.order {
+	background-color: #f8f8f8;
+	padding: 50px;
+	text-align: center;
+}
+
+.order h2 {
+	margin-bottom: 20px;
+}
+
+.order form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.order label {
+	margin-bottom: 10px;
+}
+
+.order input,
+.order select {
+	width: 300px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.order button {
+	padding: 10px 20px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+    </style>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+                <li><a href="#" style="color: rgb(234, 101, 101);">PP Restaurant</a>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Menu</a></li>
+				<li><a href="#">Reservation</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Order Food</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="hero">
+		<!-- Hero section content goes here -->
+	</section>
+
+	<section class="menu">
+		<h2>Menu</h2>
+		<ul>
+			<li>
+				<div class="food-item">
+					<img src="https://sandinmysuitcase.com/wp-content/uploads/2020/12/Beef-Biryani-1024x768.jpg.webp" alt="Food 1">
+					<h3>Biryani</h3>
+					<p>Price: Rs. 200</p>
+				</div>
+			</li>
+			<li>
+				<div class="food-item">
+					<img src="https://sandinmysuitcase.com/wp-content/uploads/2021/01/Dosa-Indian-Food.jpg.webp" alt="Food 2">
+					<h3>Dosa</h3>
+					<p>Price: Rs. 250</p>
+				</div>
+			</li>
+			<li>
+				<div class="food-item">
+					<img src="https://sandinmysuitcase.com/wp-content/uploads/2021/01/Gulab-Jamun-Indian-Dessert-1024x768.jpg.webp" alt="Food 3">
+					<h3>Gulab Jamun</h3>
+					<p>Price: Rs. 300</p>
+				</div>
+			</li>
+			<li>
+				<div class="food-item">
+					<img src="https://sandinmysuitcase.com/wp-content/uploads/2020/04/Korma.jpg.webp" alt="Food 4">
+					<h3> Korma</h3>
+					<p>Price: Rs. 350</p>
+				</div>
+			</li>
+			<li>
+				<div class="food-item">
+					<img src="https://sandinmysuitcase.com/wp-content/uploads/2020/04/Madras-Curry.jpg.webp" alt="Food 5">
+					<h3>Madras Curry</h3>
+					<p>Price: Rs. 400</p>
+				</div>
+			</li>
+			<li>
+				<div class="food-item">
+					<img src="https://sandinmysuitcase.com/wp-content/uploads/2020/04/Naan-India-1024x683.jpg.webp" alt="Food 6">
+					<h3>Naan</h3>
+					<p>Price: Rs. 450</p>
+				</div>
+			</li>
+			<li>
+				<div class="food-item">
+					<img src="https://sandinmysuitcase.com/wp-content/uploads/2021/04/Paratha.jpg.webp" alt="Food 7">
+					<h3> Paratha</h3>
+					<p>Price: Rs. 500</p>
+				</div>
+			</li>
+			<li>
+				<div class="food-item">
+					<img src="https://sandinmysuitcase.com/wp-content/uploads/2020/04/Raita.jpg.webp" alt="Food 8">
+					<h3> Raita</h3>
+					<p>Price: Rs. 550</p>
+				</div>
+			</li>
+		</ul>
+	</section>
+
+	<section class="order">
+		<h2>Order Now</h2>
+		<form>
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required>
+
+			<label for="food">Food:</label>
+			<select id="food" name="food" required>
+				<option value="">Select Food</option>
+				<option value="food1">Biryani</option>
+				<option value="food2">Dosa</option>
+				<option value="food3">Gulab Jamun</option>
+				<option value="food4">Korma</option>
+				<option value="food5">Madras Curry</option>
+				<option value="food6">Naan</option>
+				<option value="food7"> Paratha</option>
+				<option value="food8">Raita</option>
+				<!-- Add more food options here -->
+			</select>
+
+			<label for="quantity">Quantity:</label>
+			<input type="number" id="quantity" name="quantity" required>
+
+			<button type="submit">Place Order</button>
+		</form>
+	</section>
+
+	<footer>
+		<p>&copy; 2023 Indian Restaurant. All rights reserved.</p>
+	</footer>
+</body>
+</html>

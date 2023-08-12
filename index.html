@@ -1,240 +1,715 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Indian Restaurant</title>
-	<link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P&P</title>
+    <link rel="icon" href="https://i.ibb.co/znY552V/pp.png" type="image/icon type">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
     <style>
-        /* Global styles */
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.html {
+  font-size: 62.5%;
+}
+
 body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
-/* Header styles */
-header {
-	background-color: #f8f8f8;
-	padding: 20px;
+/* ///////////..utility classes../////////// */
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
 }
 
-header nav ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: small;
 }
 
-header nav li {
-	margin-left: 20px;
+.btn-primary {
+  color: #fff;
+  background: rgb(211, 77, 77);
 }
 
-header nav li:first-child {
-	margin-left: 0;
+.btn-primary:hover {
+  background: #117964;
+  transition: background 0.3s ease-in-out;
 }
 
-header nav a {
-	color: #333;
-	text-decoration: none;
-	font-size: 25px;
+/* ............/navbar/............ *
+
+/* desktop mode............/// */
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
 }
 
-/* Hero section styles */
-.hero {
-	background-image: url('hero-bg.jpg');
-	background-size: cover;
-	background-position: center;
-	height: 50px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	color: #fff;
+.navbar {
+  box-shadow: 0px 5px 10px 0px #aaa;
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  opacity: 0.85;
+  height: 50px;
+  z-index: 12;
 }
 
-/* Menu section styles */
-.menu {
-	background-color: #fff;
-	padding: 50px;
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
 }
 
-.menu h2 {
-	text-align: center;
+
+/* menu */
+
+.menu-items {
+  order: 2;
+  display: flex;
 }
 
-.menu ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	display: flex;
-	flex-wrap: wrap;
+.menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
 
-.menu li {
-	margin-right: 20px;
-	margin-bottom: 20px;
-	flex-basis: calc(33.33% - 20px);
+.menu-items a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
 }
 
-.menu li:last-child {
-	margin-right: 0;
+.menu-items a:hover {
+  color: #117964;
+  transition: color 0.3s ease-in-out;
 }
 
-.food-item {
-	text-align: center;
+.logo {
+  order: 1;
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
 }
 
-.food-item img {
-	width: 200px;
-	height: 200px;
-	object-fit: cover;
-	border-radius: 50%;
-	margin-bottom: 10px;
+/* ............//// Showcase styling ////......... */
+
+.showcase-area {
+  height: 50vh;
+  background: linear-gradient(
+      rgba(240, 240, 240, 0.144),
+      rgba(255, 255, 255, 0.336)
+    ),
+    url("https://i.ibb.co/XjSBZgn/desktop-wallpaper-indian-restaurant-background-2-background-check-all-indian-style.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* Order section styles */
-.order {
-	background-color: #f8f8f8;
-	padding: 50px;
-	text-align: center;
+.showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.6rem;
 }
 
-.order h2 {
-	margin-bottom: 20px;
+.main-title {
+  text-transform: uppercase;
+  margin-top: 1.5em;
 }
 
-.order form {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+/* ......//about us//...... */
+
+#about {
+  padding: 50px 0;
+  background: #f5f5f7;
 }
 
-.order label {
-	margin-bottom: 10px;
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.order input,
-.order select {
-	width: 300px;
-	padding: 10px;
-	margin-bottom: 10
+#about h2 {
+  font-size: 2.3rem;
 }
+
+#about p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+#about .small {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.about-img {
+  flex: 1 1 400px;
+  padding: 30px;
+  transform: translateX(150%);
+  animation: about-img-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-img-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+
+.about-text {
+  flex: 1 1 400px;
+  padding: 30px;
+  margin: auto;
+  transform: translate(-150%);
+  animation: about-text-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-text-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+
+.about-img img {
+  display: block;
+  height: 400px;
+  max-width: 100%;
+  margin: auto;
+  object-fit: cover;
+  object-position: right;
+}
+
+
+
+/* .........../Food Menu/............ */
+
+.food-menu-heading {
+  text-align: center;
+  font-size: 3.4rem;
+  font-weight: 400;
+  color: #666;
+}
+
+.food-menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0px 30px 0px;
+}
+
+.food-menu-container img {
+  display: block;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.food-menu-item {
+  display: flex;
+  flex: 1 1 600px;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+}
+
+.food-description {
+  margin: auto 1.5rem;
+}
+
+.font-title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #444;
+}
+
+.food-description p {
+  font-size: 30px;
+  color: #555;
+  font-weight: 500;
+}
+
+.food-description .food-price {
+  color: #117964;
+  font-weight: 700;
+}
+
+
+/* ........ Contact Us........... */
+
+#contact {
+  padding: 5rem 0;
+  background: rgb(226, 226, 226);
+}
+
+.contact-container {
+  display: flex;
+  background: #fff;
+}
+
+.contact-img {
+  width: 50%;
+}
+
+.contact-img img {
+  display: block;
+  height: 400px;
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.form-container {
+  padding: 1rem;
+  width: 50%;
+  margin: auto;
+}
+
+.form-container input {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  padding: 1rem 0;
+  box-shadow: none;
+  outline: none;
+  margin-bottom: 1rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.form-container textarea {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  color: #444;
+  outline: none;
+  padding: 1rem 0;
+  resize: none;
+}
+
+.form-container h2 {
+  font-size: 2.7rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 1rem;
+  margin-top: -1.2rem;
+}
+
+.form-container a {
+  font-size: 1.3rem;
+}
+
+#footer h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 2.6rem;
+  font-weight: 500;
+  color: #fff;
+  background: rgb(65, 65, 65);
+  background-image:  url("https://i.ibb.co/XjSBZgn/desktop-wallpaper-indian-restaurant-background-2-background-check-all-indian-style.jpg");
+}
+
+/* ......../ media query /.......... */
+
+@media (max-width: 768px) {
+  .navbar {
+    opacity: 0.95;
+  }
+
+  .navbar-container input[type="checkbox"],
+  .navbar-container .hamburger-lines {
+    display: block;
+  }
+
+  .navbar-container {
+    display: block;
+    position: relative;
+    height: 64px;
+  }
+
+  .navbar-container input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+  }
+
+  .navbar-container .hamburger-lines {
+    display: block;
+    height: 23px;
+    width: 35px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #333;
+  }
+
+  .navbar-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .navbar .menu-items {
+    padding-top: 100px;
+    background: #fff;
+    height: 100vh;
+    max-width: 300px;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 0px 10px 0px #aaa;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  .logo {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 2rem;
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(35deg);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-35deg);
+  }
+
+  /* ......./ food /......... */
+
+  .food-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .food-type:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
+  .food-type {
+    box-shadow: 5px 5px 10px 0 #aaa;
+  }
+
+  .img-container {
+    margin: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 65%;
+  }
+
+  .navbar .menu-items li{
+      font-size: 1.6rem;
+  }
+
+ 
+  .food-menu-container img {
+    margin: auto;
+  }
+
+  .food-menu-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .form-container {
+    width: 90%;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-img {
+    width: 90%;
+    margin: 3rem auto;
+  }
+
+  .logo {
+    position: absolute;
+    top: 06px;
+    right: 15px;
+    font-size: 3rem;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 2.5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .img-container h3 {
+    font-size: 1.5rem;
+  }
+
+  .img-container .btn {
+    font-size: 0.7rem;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .showcase-area {
+    height: 50vmax;
+  }
+}
+
     </style>
-</head>
-<body>
-	<header>
-		<nav>
-			<ul>
-                <li><a href="#" style="color: rgb(225, 131, 131);">PP Restaurant</a></li>
-				<li><a href="#">Menu</a></li>
-				<li><a href="#">Reservation</a></li>
-				<li><a href="#">Order Food</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container container">
+          <input type="checkbox" name="" id="">
+          <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+          </div>
+          <ul class="menu-items">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#food-menu">Menu</a></li>
+              <li><a href="#contact">Contact</a></li>
+          </ul>
+          <h1 class="logo">P&P Restaurant</h1>
+          
+      </div>
+  </nav>
+    <section class="showcase-area" id="showcase">
+      <div class="showcase-container">
+        <h1 class="main-title" id="home">Let’s Eat Together! </h1>
+        <a href="#food-menu" class="btn btn-primary">Menu</a>
+      </div>
+    </section>
 
-	<section class="hero">
-		<!-- Hero section content goes here -->
-	</section>
+    <section id="about">
+      <div class="about-wrapper container">
+        <div class="about-text">
+          <p class="small">About Us</p>
+          <h2>Welcome to our place. You will find happiness and food here.</h2>
+          
+        </div>
+        <div class="about-img">
+          <img src="https://i.ibb.co/2WW2kTp/food-1.png" alt="food" />
+        </div>
+      </div>
+    </section>
 
-	<section class="menu">
-		<h2>Menu</h2>
-		<ul>
-			<li>
-				<div class="food-item">
-					<img src="https://sandinmysuitcase.com/wp-content/uploads/2020/12/Beef-Biryani-1024x768.jpg.webp" alt="Food 1">
-					<h3>Biryani</h3>
-					<p>Price: Rs. 200</p>
-				</div>
-			</li>
-			<li>
-				<div class="food-item">
-					<img src="https://sandinmysuitcase.com/wp-content/uploads/2021/01/Dosa-Indian-Food.jpg.webp" alt="Food 2">
-					<h3>Dosa</h3>
-					<p>Price: Rs. 250</p>
-				</div>
-			</li>
-			<li>
-				<div class="food-item">
-					<img src="https://sandinmysuitcase.com/wp-content/uploads/2021/01/Gulab-Jamun-Indian-Dessert-1024x768.jpg.webp" alt="Food 3">
-					<h3>Gulab Jamun</h3>
-					<p>Price: Rs. 300</p>
-				</div>
-			</li>
-			<li>
-				<div class="food-item">
-					<img src="https://sandinmysuitcase.com/wp-content/uploads/2020/04/Korma.jpg.webp" alt="Food 4">
-					<h3> Korma</h3>
-					<p>Price: Rs. 350</p>
-				</div>
-			</li>
-			<li>
-				<div class="food-item">
-					<img src="https://sandinmysuitcase.com/wp-content/uploads/2020/04/Madras-Curry.jpg.webp" alt="Food 5">
-					<h3>Madras Curry</h3>
-					<p>Price: Rs. 400</p>
-				</div>
-			</li>
-			<li>
-				<div class="food-item">
-					<img src="https://sandinmysuitcase.com/wp-content/uploads/2020/04/Naan-India-1024x683.jpg.webp" alt="Food 6">
-					<h3>Naan</h3>
-					<p>Price: Rs. 450</p>
-				</div>
-			</li>
-			<li>
-				<div class="food-item">
-					<img src="https://sandinmysuitcase.com/wp-content/uploads/2021/04/Paratha.jpg.webp" alt="Food 7">
-					<h3> Paratha</h3>
-					<p>Price: Rs. 500</p>
-				</div>
-			</li>
-			<li>
-				<div class="food-item">
-					<img src="https://sandinmysuitcase.com/wp-content/uploads/2020/04/Raita.jpg.webp" alt="Food 8">
-					<h3> Raita</h3>
-					<p>Price: Rs. 550</p>
-				</div>
-			</li>
-		</ul>
-	</section>
+    <section id="food-menu">
+      <h2 class="food-menu-heading">Food Menu</h2>
+      <div class="food-menu-container container">
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img src="https://sandinmysuitcase.com/wp-content/uploads/2020/12/Beef-Biryani-1024x768.jpg.webp" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Biryani</h2>
+            <p>
+                vegetable biryani is an aromatic rice dish made with basmati rice, spices & mixed veggies.
+            </p>
+            <p class="food-price">Price: &#8377; 250</p>
+          </div>
+        </div>
 
-	<section class="order">
-		<h2>Order Now</h2>
-		<form>
-			<label for="name">Name:</label>
-			<input type="text" id="name" name="name" required>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img
+              src="https://sandinmysuitcase.com/wp-content/uploads/2021/01/Dosa-Indian-Food.jpg.webp"
+              alt="error"
+            />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Dosa</h2>
+            <p>
+                South Indian, fermented crepe made from rice batter and black lentils.
+            </p>
+            <p class="food-price">Price: &#8377; 250</p>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img src="https://sandinmysuitcase.com/wp-content/uploads/2020/04/Korma.jpg.webp" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile"> Korma</h2>
+            <p>
+                Kurma is made with coconut, seeds, sometimes nuts and no brown onion paste.
+            </p>
+            <p class="food-price">Price: &#8377; 250</p>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img src="https://sandinmysuitcase.com/wp-content/uploads/2020/04/Raita.jpg.webp" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Raita</h2>
+            <p>
+                Raita is a side dish in Indian cuisine made of dahi.
+            </p>
+            <p class="food-price">Price: &#8377; 250</p>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img src="https://sandinmysuitcase.com/wp-content/uploads/2020/04/Naan-India-1024x683.jpg.webp" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Naan</h2>
+            <p>
+                Naan bread is a type of bread made with flour.
+            </p>
+            <p class="food-price">Price: &#8377; 250</p>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img src="https://sandinmysuitcase.com/wp-content/uploads/2021/04/Paratha.jpg.webp" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Paratha</h2>
+            <p>
+                Paratha are unleavened layered flatbreads made with whole wheat flour (atta), salt, water & ghee or oil.
+            </p>
+            <p class="food-price">Price: &#8377; 250</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="contact">
+      <div class="contact-container container">
+        <div class="contact-img">
+          <img src="https://i.postimg.cc/1XvYM67V/restraunt2.jpg" alt="" />
+        </div>
 
-			<label for="email">Email:</label>
-			<input type="email" id="email" name="email" required>
+        <div class="form-container">
+          <h2>Contact Us</h2>
+          <input type="text" placeholder="Your Name" />
+          <input type="email" placeholder="E-Mail" />
+          <textarea
+            cols="30"
+            rows="6"
+            placeholder="Type Your Message"
+          ></textarea>
+          <a href="#" class="btn btn-primary">Submit</a>
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+      <h2>P&P Restraunt &copy; all rights reserved</h2>
+    </footer>
+  </body>
+  <!-- 
+    .................../ JS Code for smooth scrolling /...................... -->
 
-			<label for="food">Food:</label>
-			<select id="food" name="food" required>
-				<option value="">Select Food</option>
-				<option value="food1">Food 1</option>
-				<option value="food2">Food 2</option>
-				<option value="food3">Food 3</option>
-				<option value="food4">Food 4</option>
-				<option value="food5">Food 5</option>
-				<option value="food6">Food 6</option>
-				<option value="food7">Food 7</option>
-				<option value="food8">Food 8</option>
-				<!-- Add more food options here -->
-			</select>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Add smooth scrolling to all links
+      $("a").on("click", function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
 
-			<label for="quantity">Quantity:</label>
-			<input type="number" id="quantity" name="quantity" required>
+          // Store hash
+          var hash = this.hash;
 
-			<button type="submit">Place Order</button>
-		</form>
-	</section>
-
-	<footer>
-		<p>&copy; 2023 Indian Restaurant. All rights reserved.</p>
-	</footer>
-
-	<script src="script.js"></script>
-</body>
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800,
+            function () {
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            }
+          );
+        } // End if
+      });
+    });
+  </script>
 </html>

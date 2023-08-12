@@ -534,6 +534,34 @@ body {
   }
 }
 
+/* Order section styles */
+.order {
+	background-image: url(../project/imgonline-com-ua-resize-ech4FYfRAV7Q.jpg);
+  background-repeat: no-repeat;
+	padding: 50px;
+	text-align: center;
+}
+
+.order h2 {
+	margin-bottom: 20px;
+}
+
+.order form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.order label {
+	margin-bottom: 10px;
+}
+
+.order input,
+.order select {
+	width: 300px;
+	padding: 10px;
+	margin-bottom: 10
+}
     </style>
   </head>
   <body>
@@ -587,7 +615,7 @@ body {
             <p>
                 vegetable biryani is an aromatic rice dish made with basmati rice, spices & mixed veggies.
             </p>
-            <p class="food-price">Price: &#8377; 250</p>
+            <p class="food-price">Price: &#8377; 450</p>
           </div>
         </div>
 
@@ -603,7 +631,7 @@ body {
             <p>
                 South Indian, fermented crepe made from rice batter and black lentils.
             </p>
-            <p class="food-price">Price: &#8377; 250</p>
+            <p class="food-price">Price: &#8377; 300</p>
           </div>
         </div>
         <div class="food-menu-item">
@@ -615,7 +643,7 @@ body {
             <p>
                 Kurma is made with coconut, seeds, sometimes nuts and no brown onion paste.
             </p>
-            <p class="food-price">Price: &#8377; 250</p>
+            <p class="food-price">Price: &#8377; 350</p>
           </div>
         </div>
         <div class="food-menu-item">
@@ -627,7 +655,7 @@ body {
             <p>
                 Raita is a side dish in Indian cuisine made of dahi.
             </p>
-            <p class="food-price">Price: &#8377; 250</p>
+            <p class="food-price">Price: &#8377; 290</p>
           </div>
         </div>
         <div class="food-menu-item">
@@ -639,7 +667,7 @@ body {
             <p>
                 Naan bread is a type of bread made with flour.
             </p>
-            <p class="food-price">Price: &#8377; 250</p>
+            <p class="food-price">Price: &#8377; 150</p>
           </div>
         </div>
         <div class="food-menu-item">
@@ -651,11 +679,41 @@ body {
             <p>
                 Paratha are unleavened layered flatbreads made with whole wheat flour (atta), salt, water & ghee or oil.
             </p>
-            <p class="food-price">Price: &#8377; 250</p>
+            <p class="food-price">Price: &#8377; 90</p>
           </div>
         </div>
       </div>
     </section>
+
+
+    <!-- order  -->
+	<section class="order">
+		<h1 style="color: rgb(241, 0, 0); font-size: 35px;">Order Now</h1>
+		<form>
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+
+			<label for="number">Number:</label>
+			<input type="number" id="number" name="number" required>
+
+			<label for="food">Food:</label>
+			<select id="food" name="food" required>
+				<option value="">Select Food</option>
+				<option value="food1">Biryani</option>
+				<option value="food2">Dosa</option>
+				<option value="food4">Korma</option>
+				<option value="food8">Raita</option>
+				<option value="food6">Naan</option>
+				<option value="food7">Paratha</option>
+				<!-- Add more food options here -->
+			</select>
+
+			<label for="quantity">Quantity:</label>
+			<input type="number" id="quantity" name="quantity" required>
+
+			<button type="submit">Place Order</button>
+		</form>
+	</section>
     
     <section id="contact">
       <div class="contact-container container">
